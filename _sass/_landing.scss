@@ -20,10 +20,10 @@ section {
 }
 .jumbotron {
 	background: $jumbotron-color;
-	background-position: bottom center;
+	background-position: top center;
 	background-repeat: no-repeat;
 	background-image: url('../img/#{$jumbotron-image}');
-	background-size: auto;
+	background-size: cover;
 	color: $white;
 	position: relative;
 
