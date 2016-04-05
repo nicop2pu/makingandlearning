@@ -2,7 +2,7 @@
 layout: index
 published: true
 extra_js:
- - http://localhost:8000/en/studygroups/?course_id=2&callback=renderCircles
+ - https://learningcircles.p2pu.org/en/studygroups/?course_id=2&callback=renderCircles
 ---
 
 # Take the course in person
