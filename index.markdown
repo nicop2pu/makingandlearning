@@ -1,29 +1,49 @@
 ---
 layout: index
 published: true
+extra_js:
+ - http://localhost:8000/en/studygroups/?course_id=2&callback=renderCircles
 ---
 
 # Take the course in person
 
 Learning Circles offer the opportunity to work through the course with your local community. Join a Learning Circle near you below, or create your own!
 
-<div class="row">
-<div class="col-md-4">{% include lc-card.html %}</div>
-<div class="col-md-4">{% include lc-card.html %}</div>
+<div id="lc-container" class="row">
 <div class="col-md-4">{% include lc-card.html %}</div>
 </div>
 
 Or <a href="https://learningcircles.p2pu.org/" class="btn btn-primary">create your own</a>
 
 <script type="text/javascript">
-    var lc_course_id = "11";
+    function renderCircle(circle, template) {
+        var html = template.clone();
+        html.find('.d-course_title').text(circle.course_title);
+        html.find('.d-facilitator').text(circle.facilitator);
+        html.find('.d-venue').text(circle.venue);
+        html.find('.d-venue_address').text(circle.venue_address);
+        html.find('.d-day').text(circle.day + 's');
+        html.find('.d-start_date').text(circle.start_date);
+        html.find('.d-meeting_time').text(circle.meeting_time); // format time here
+        html.find('.d-time_zone').text(circle.time_zone);
+        html.find('.d-end_time').text(circle.end_time);
+        html.find('.d-weeks').text(circle.weeks);
+        html.find('.d-url').attr('href', circle.url);
+        if (circle.image_url.length > 0){
+            html.find('.d-image_url').attr('src', circle.image_url);
+        }
+        return html;
+    }
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-
+    function renderCircles(circles){
+        var container = $('#lc-container');
+        var template = $(container.children()[0]).clone();
+        container.children().remove();
+        for (var i = 0; i< circles.length; ++i){
+            var lcHtml = renderCircle(circles[i], template);
+            container.append(lcHtml);
+        }
+    }
 </script>
 
 # About the course
