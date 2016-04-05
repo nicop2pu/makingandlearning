@@ -56,7 +56,13 @@
 
 {% if page.extra_js %}
   {% for js in page.extra_js %}
-    <script src="{{site.baseurl}}{{js}}"></script>
+    {% if js contains '<script>' %}
+      {{ js }}
+    {% elsif js contains 'http' %}
+      <script src="{{ js }}"></script>
+    {% else %}
+      <script src="{{site.baseurl}}{{js}}"></script>
+    {% endif %}
   {% endfor %}
 {% endif %}
 
