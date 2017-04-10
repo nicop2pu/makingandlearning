@@ -1,3 +1,6 @@
+# Goals of this Course 
+The goal of this course is for participants to use our framework to assist in the design and/or implementation of a makerspace or maker program that supports learning in a museum or library. The course can support people who are beginning the development of a new makerspace or maker program or improving upon one that is already up and running. 
+
 # Intended Audience
 
 This course is intended for museum and library professionals, or anybody who is designing a makerspace. We encourage participants to engage in the sessions with team members, from your own organization and/or with partner organizations. 
@@ -20,8 +23,10 @@ This is an open course, meaning that there is no registration or logging in requ
 
 If you’d like to work through these materials with a group of colleagues or friends (recommended), when we can provide some additional support for you, including 
 
-1. Sign up as a learning circle facilitator and review the facilitator handbook.
+1. Sign up as a [learning circle facilitator](http://learningcircles.p2pu.org) and review the facilitator handbook.
 1. Create a learning circle, selecting Making and Learning as the Course
 1. Advertise the learning circle locally
 1. Join community
 1. Join Discourse
+
+If you’d like to review the course material on your own, go right ahead! There are no log ins or sign ups required.
